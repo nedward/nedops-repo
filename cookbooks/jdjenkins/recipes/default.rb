@@ -18,7 +18,7 @@ chef_dk 'my_chef_dk'
 group 'docker' do
   action :create
   gid 999
-  members ['ec2-user']
+  members ['jenkins']
 end
 
 package 'docker-io' do
