@@ -4,6 +4,18 @@
 #
 # Copyright (c) 2015 The Authors, All Rights Reserved.
 
+user 'jenkins' do
+  action :create
+  comment 'Jenkins Service User'
+  uid 1000
+  gid 'jenkins'
+  home '/home/jenkins'
+  shell '/bin/zsh'
+  password 'Agilent123'
+  supports :manage_home => true
+end
+
+
 include_recipe 'jenkins::master'
 include_recipe 'chef-dk'
 
@@ -15,16 +27,6 @@ jenkins_plugin 'git'
 
 chef_dk 'my_chef_dk'
 
-user 'jenkins' do
-  action :create
-  comment 'Jenkins Service User'
-  uid 1000
-  gid 'jenkins'
-  home '/home/jenkins'
-  shell '/bin/zsh'
-  password 'Agilent123'
-  supports :manage_home => true
-end
 
 
 group 'docker' do
