@@ -5,7 +5,7 @@
 # Copyright (c) 2015 The Authors, All Rights Reserved.
 
 user 'jenkins' do
-  action :delete
+  action :remove
   # comment 'Jenkins Service User'
   # uid 1000
   # gid 'jenkins'
