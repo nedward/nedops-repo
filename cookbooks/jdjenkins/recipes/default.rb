@@ -19,7 +19,7 @@ user 'jenkins' do
   action :create
   comment 'Jenkins Service User'
   uid 1000
-  gid ['users','docker']
+  gid 'jenkins'
   home '/home/jenkins'
   shell '/bin/zsh'
   password 'Agilent123'
