@@ -5,14 +5,14 @@
 # Copyright (c) 2015 The Authors, All Rights Reserved.
 
 user 'jenkins' do
-  action :create
-  comment 'Jenkins Service User'
-  uid 1000
-  gid 'jenkins'
-  home '/home/jenkins'
-  shell '/bin/zsh'
-  password 'Agilent123'
-  supports :manage_home => true
+  action :delete
+  # comment 'Jenkins Service User'
+  # uid 1000
+  # gid 'jenkins'
+  # home '/home/jenkins'
+  # shell '/bin/zsh'
+  # password 'Agilent123'
+  # supports :manage_home => true
 end
 
 
