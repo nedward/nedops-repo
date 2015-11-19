@@ -15,6 +15,18 @@ jenkins_plugin 'git'
 
 chef_dk 'my_chef_dk'
 
+user 'jenkins' do
+  action :create
+  comment 'Jenkins Service User'
+  uid 1000
+  gid ['users','docker']
+  home '/home/jenkins'
+  shell '/bin/zsh'
+  password 'Agilent123'
+  supports :manage_home => true
+end
+
+
 group 'docker' do
   action :create
   gid 999
