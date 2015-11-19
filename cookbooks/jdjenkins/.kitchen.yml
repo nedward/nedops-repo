@@ -1,6 +1,7 @@
 ---
 driver:
   name: docker
+  binary: docker.io
 
 provisioner:
   name: chef_zero
